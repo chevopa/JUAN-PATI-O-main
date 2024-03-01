@@ -6,21 +6,21 @@ class simuladorbancario:
     nombre=''
     mesaapertra=0
 '''asocianes'''
-ConsultarValor=cuentacorriente()
+CuentaCorriente= cuentacorriente()
+CuentaAhorro=cuentaclasedeahorros()
 
 '''#metodos'''
-def consignarCuentaCorriente(self):
-    cantidad=0
-    self.Saldo=ConsultarValor()+cantidad
+def consignarCuentaCorriente(self,cantidad):
+    self.Saldo=CuentaCorriente()+cantidad
     return self.Saldo
-def CalcularTotal():
-    SaldoTotal=cuentaclasedeahorros+cuentacorriente()
-    return SaldoTotal
+def CalcularTotal(self):
+    self.SaldoTotal=CuentaCorriente()+CuentaAhorro()
+    return self.SaldoTotal
 def CambioCuentas(self):
-    self.Saldo+cuentaclasedeahorros()
+    self.Saldo+=CuentaAhorro()
     return self.Saldo 
-def RetirarAhorros(self):
-    self.SaldoAhorro=cuentaclasedeahorros()-0
+def RetirarAhorros(self,cantidad):
+    self.SaldoAhorro=CuentaAhorro()-cantidad
     return self.SaldoAhorro
 def ConsultarSaldoCorriente(self):
     return self.Saldo
